@@ -49,8 +49,8 @@ public class SolrDataImportProperties {
 
     public void loadProperties(boolean force) {
         try {
-            SolrResourceLoader loader = new SolrResourceLoader(null);
-            logger.info("Instance dir = " + loader.getInstanceDir());
+            SolrResourceLoader loader = new SolrResourceLoader();
+            logger.info("Instance dir = " + loader.getInstancePath());
 
             String configDir = loader.getConfigDir();
             configDir = SolrResourceLoader.normalizeDir(configDir);
